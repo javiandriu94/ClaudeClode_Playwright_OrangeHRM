@@ -1,4 +1,4 @@
-import { Given, When, Then } from './fixtures.ts';
+import { Given, When, Then } from './fixtures';
 import users from '../resources/data/users.json';
 
 Given('que el usuario abre la página de login', async ({ loginPage }) => {

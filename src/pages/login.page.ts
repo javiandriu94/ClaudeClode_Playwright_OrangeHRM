@@ -1,5 +1,5 @@
 import { Page, expect } from '@playwright/test';
-import { LoginModule } from '../modules/LoginModule';
+import { LoginModule } from '../modules/login.module';
 
 export class LoginPage {
   private readonly locators: LoginModule;
