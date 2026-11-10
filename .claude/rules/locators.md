@@ -11,3 +11,5 @@ paths:
 - Si usas CSS selector, deja un comentario que explique por qué no hay opción semántica.
 - Evita selectores frágiles: clases autogeneradas, índices (nth) y rutas largas de elementos.
 - Un locator no contiene lógica ni acciones.
+- Cada locator se guarda en el Module de la página donde se encontró (`login.module.ts` para login, `dashboard.module.ts` para el dashboard).
+- No dupliques locators entre Modules: si un elemento ya existe en el Module de su página, reutilízalo desde ahí.

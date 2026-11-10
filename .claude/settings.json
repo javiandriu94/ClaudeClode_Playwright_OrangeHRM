@@ -17,7 +17,8 @@
       "mcp__playwright__browser_type",
       "mcp__playwright__browser_fill_form",
       "mcp__playwright__browser_wait_for",
-      "mcp__playwright__browser_close"
+      "mcp__playwright__browser_close",
+      "mcp__github"
     ],
     "ask": [
       "Bash(git commit *)",
@@ -26,7 +27,9 @@
       "Edit(playwright.config.ts)",
       "Edit(package.json)",
       "Edit(.claude/**)",
-      "mcp__playwright__browser_evaluate"
+      "mcp__playwright__browser_evaluate",
+      "mcp__github__update_issue",
+      "mcp__github__issue_write"
     ],
     "deny": [
       "Read(./.env)",
@@ -34,6 +37,7 @@
       "Read(./secrets/**)",
       "Read(~/.ssh/**)",
       "Read(~/.aws/**)",
+      "Read(~/.secrets/**)",
       "Edit(./.env)",
       "Edit(./.env.*)",
       "Bash(rm -rf *)",
@@ -47,7 +51,8 @@
       "Bash(git push -f)",
       "Bash(git push -f *)",
       "Bash(git reset --hard *)",
-      "mcp__playwright__browser_file_upload"
+      "mcp__playwright__browser_file_upload",
+      "mcp__github__merge_pull_request"
     ]
   }
 }

@@ -10,8 +10,8 @@ When('inicia sesión con las credenciales {string}', async ({ loginPage }, key: 
   await loginPage.login(user.username, user.password);
 });
 
-Then('debería ver el dashboard', async ({ loginPage }) => {
-  await loginPage.expectDashboardVisible();
+Then('debería ver el dashboard', async ({ dashboardPage }) => {
+  await dashboardPage.expectDashboardVisible();
 });
 
 Then('debería ver el mensaje de error {string}', async ({ loginPage }, message: string) => {

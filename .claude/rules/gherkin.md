@@ -1,6 +1,6 @@
 ---
 paths:
-  - "src/resources/feature/**/*.feature"
+  - "src/feature/**/*.feature"
 ---
 # Escenarios Gherkin
 

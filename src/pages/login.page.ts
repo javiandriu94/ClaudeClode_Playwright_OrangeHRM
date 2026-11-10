@@ -14,8 +14,8 @@ export class LoginPage {
     await LoginModule.loginButton(this.page).click();
   }
 
-  async expectDashboardVisible() {
-    await expect(LoginModule.dashboardTitle(this.page)).toBeVisible();
+  async expectLoginPageVisible() {
+    await expect(LoginModule.loginTitle(this.page)).toBeVisible();
   }
 
   async expectErrorMessage(message: string) {

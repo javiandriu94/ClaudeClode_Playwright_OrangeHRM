@@ -10,6 +10,13 @@
         "https://opensource-demo.orangehrmlive.com"
       ],
       "env": {}
+    },
+    "github": {
+      "type": "http",
+      "url": "https://api.githubcopilot.com/mcp/readonly",
+      "headers": {
+        "Authorization": "Bearer ${GITHUB_PAT}"
+      }
     }
   }
 }

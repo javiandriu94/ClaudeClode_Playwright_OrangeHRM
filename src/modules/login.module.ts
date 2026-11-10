@@ -10,8 +10,8 @@ export class LoginModule {
   static readonly loginButton = (page: Page): Locator =>
     page.getByRole('button', { name: 'Login' });
 
-  static readonly dashboardTitle = (page: Page): Locator =>
-    page.getByRole('heading', { name: 'Dashboard' });
+  static readonly loginTitle = (page: Page): Locator =>
+    page.getByRole('heading', { name: 'Login' });
 
   static readonly errorMessage = (page: Page): Locator =>
     page.getByRole('alert');
