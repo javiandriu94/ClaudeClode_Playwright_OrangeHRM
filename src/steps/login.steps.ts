@@ -17,3 +17,7 @@ Then('debería ver el dashboard', async ({ loginPage }) => {
 Then('debería ver el mensaje de error {string}', async ({ loginPage }, message: string) => {
   await loginPage.expectErrorMessage(message);
 });
+
+Then('debería ver el mensaje de campo requerido', async ({ loginPage }) => {
+  await loginPage.expectRequiredMessage();
+});

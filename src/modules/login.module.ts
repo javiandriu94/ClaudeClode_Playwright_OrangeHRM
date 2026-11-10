@@ -1,17 +1,21 @@
 import { Locator, Page } from '@playwright/test';
 
 export class LoginModule {
-  readonly usernameInput: Locator;
-  readonly passwordInput: Locator;
-  readonly loginButton: Locator;
-  readonly dashboardTitle: Locator;
-  readonly errorMessage: Locator;
+  static readonly usernameInput = (page: Page): Locator =>
+    page.getByRole('textbox', { name: 'Username' });
 
-  constructor(page: Page) {
-    this.usernameInput = page.getByPlaceholder('Username');
-    this.passwordInput = page.getByPlaceholder('Password');
-    this.loginButton = page.getByRole('button', { name: 'Login' });
-    this.dashboardTitle = page.getByRole('heading', { name: 'Dashboard' });
-    this.errorMessage = page.locator('.oxd-alert-content-text');
-  }
+  static readonly passwordInput = (page: Page): Locator =>
+    page.getByRole('textbox', { name: 'Password' });
+
+  static readonly loginButton = (page: Page): Locator =>
+    page.getByRole('button', { name: 'Login' });
+
+  static readonly dashboardTitle = (page: Page): Locator =>
+    page.getByRole('heading', { name: 'Dashboard' });
+
+  static readonly errorMessage = (page: Page): Locator =>
+    page.getByRole('alert');
+
+  static readonly requiredMessage = (page: Page): Locator =>
+    page.getByText('Required', { exact: true });
 }

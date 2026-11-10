@@ -1,4 +1,6 @@
 {
   "admin": { "username": "Admin", "password": "admin123" },
-  "invalido": { "username": "Admin", "password": "clave_incorrecta" }
+  "invalido": { "username": "Admin", "password": "clave_incorrecta" },
+  "sin_usuario": { "username": "", "password": "admin123" },
+  "sin_password": { "username": "Admin", "password": "" }
 }

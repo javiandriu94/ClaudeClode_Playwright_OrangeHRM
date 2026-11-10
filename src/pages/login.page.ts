@@ -2,27 +2,27 @@ import { Page, expect } from '@playwright/test';
 import { LoginModule } from '../modules/login.module';
 
 export class LoginPage {
-  private readonly locators: LoginModule;
-
-  constructor(private readonly page: Page) {
-    this.locators = new LoginModule(page);
-  }
+  constructor(private readonly page: Page) {}
 
   async open() {
     await this.page.goto('/web/index.php/auth/login');
   }
 
   async login(username: string, password: string) {
-    await this.locators.usernameInput.fill(username);
-    await this.locators.passwordInput.fill(password);
-    await this.locators.loginButton.click();
+    await LoginModule.usernameInput(this.page).fill(username);
+    await LoginModule.passwordInput(this.page).fill(password);
+    await LoginModule.loginButton(this.page).click();
   }
 
   async expectDashboardVisible() {
-    await expect(this.locators.dashboardTitle).toBeVisible();
+    await expect(LoginModule.dashboardTitle(this.page)).toBeVisible();
   }
 
   async expectErrorMessage(message: string) {
-    await expect(this.locators.errorMessage).toHaveText(message);
+    await expect(LoginModule.errorMessage(this.page)).toHaveText(message);
+  }
+
+  async expectRequiredMessage() {
+    await expect(LoginModule.requiredMessage(this.page)).toBeVisible();
   }
 }

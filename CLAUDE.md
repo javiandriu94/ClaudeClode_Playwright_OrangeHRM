@@ -33,3 +33,9 @@ Para añadir una pantalla nueva: `Module` (locators) → `Page` (acciones) → r
 
 ## Notas
 - `README.md` Será la documentación del proyecto
+
+## Exploración con MCP
+- Playwright MCP es solo para explorar la web y proponer locators o flujos. Los tests nunca dependen de él.
+- Úsalo únicamente sobre https://opensource-demo.orangehrmlive.com.
+- Todo locator propuesto por el MCP se valida ejecutando `npm test` antes de darlo por bueno.
+- No uses el MCP para leer, extraer ni escribir credenciales.
