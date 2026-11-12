@@ -38,7 +38,8 @@ Para añadir una pantalla nueva: `Module` (locators) → `Page` (acciones) → r
 - Playwright MCP es solo para explorar la web y proponer locators o flujos. Los tests nunca dependen de él.
 - Úsalo únicamente sobre https://opensource-demo.orangehrmlive.com.
 - Todo locator propuesto por el MCP se valida ejecutando `npm test` antes de darlo por bueno.
-- No uses el MCP para leer, extraer ni escribir credenciales.
+- No uses el MCP para leer, extraer ni escribir credenciales, salvo las que la propia aplicación muestre visibles en pantalla (p. ej. el texto de ayuda de la página de login). Solo para iniciar sesión durante la exploración; nunca las copies a código, features, datos ni documentación.
+- Nunca leas `users.json` ni `.env` con el MCP.
 
 
 ## GitHub MCP

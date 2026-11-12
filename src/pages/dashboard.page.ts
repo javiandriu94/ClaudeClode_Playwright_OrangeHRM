@@ -13,6 +13,13 @@ export class DashboardPage {
     await DashboardModule.logoutMenuItem(this.page).click();
   }
 
+  async logoutIfSessionActive() {
+    const userMenu = DashboardModule.userMenuDropdown(this.page);
+    if (await userMenu.isVisible()) {
+      await this.logout();
+    }
+  }
+
   async goBack() {
     await this.page.goBack();
   }
