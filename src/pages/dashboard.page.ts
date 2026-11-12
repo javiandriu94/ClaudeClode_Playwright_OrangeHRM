@@ -28,4 +28,16 @@ export class DashboardPage {
   async expectDashboardNotVisible() {
     await expect(DashboardModule.dashboardTitle(this.page)).toBeHidden();
   }
+
+  async expectWidgetVisible(title: string) {
+    await expect(DashboardModule.widgetTitle(this.page, title)).toBeVisible();
+  }
+
+  async expectMenuItemVisible(name: string) {
+    await expect(DashboardModule.sideMenuLink(this.page, name)).toBeVisible();
+  }
+
+  async expectQuickLaunchActionVisible(name: string) {
+    await expect(DashboardModule.quickLaunchButton(this.page, name)).toBeVisible();
+  }
 }

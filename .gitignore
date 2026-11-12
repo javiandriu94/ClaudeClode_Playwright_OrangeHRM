@@ -6,3 +6,5 @@ playwright-report
 .env
 .env.*
 .claude/settings.local.json
+.claude/logs/
+.playwright-mcp/
